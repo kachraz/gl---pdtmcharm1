@@ -3,9 +3,16 @@
 
 ----
 1. [❓](#)
+2. [Lynx](#lynx)
 
 ----
 
 # ❓
 
 > This is the shippign list tutorial , note all versions of the code will also be in here
+
+# Lynx 
+
+W | ?
+-- | --
+[`https://pkg.go.dev/github.com/charmbracelet/bubbletea`](https://pkg.go.dev/github.com/charmbracelet/bubbletea) | Official go lang documentatin reference for bubble tea <br> need to heavily reference this
