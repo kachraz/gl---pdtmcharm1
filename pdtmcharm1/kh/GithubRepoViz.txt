@@ -1,4 +1,0 @@
-This is an official repo visualization tool which you can use for quickly seeing
-the structure of the repo.
-
-https://githubnext.com/projects/repo-visualization/
