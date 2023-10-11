@@ -6,6 +6,7 @@ package work
 
 import (
 	"fmt"
+	"os"
 
 	tea "github.com/charmbracelet/bubbletea"
 )
@@ -15,7 +16,7 @@ import (
 
 // This is the main caller of the function
 func V1m() {
-	fmt.Println("V1 of the work which you are doing , doing it this way for testing stuff which you have alreaady learn")
+	v1f()
 }
 
 // ---------------------------------
@@ -62,8 +63,8 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		switch msg.String() {
 
 		// These keys should exit the program.
-		case "ctrl+d", "q": // You cahnged 
-			return m, tea.Quit
+		case "ctrl+d", "q": // You cahnged
+			return m, tea.Quit // tea.Quit is the build in function to exit the program
 
 		// The "up" and "k" keys move the cursor up
 		case "up", "k":
@@ -92,4 +93,44 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	// Return the updated model to the Bubble Tea runtime for processing.
 	// Note that we're not returning a command.
 	return m, nil
+}
+
+// This is the view model
+func (m model) View() string {
+	// The header
+	s := "What time of dirty fetish you would like today ? \n\n"
+
+	// Iterate over our choices
+	for i, choice := range m.choices {
+
+		// Is the cursor pointing at this choice?
+		cursor := " " // no cursor
+		if m.cursor == i {
+			cursor = "👉" // cursor!
+		}
+
+		// Is this choice selected?
+		checked := " " // not selected
+		if _, ok := m.selected[i]; ok {
+			checked = "✅" // selected!
+		}
+
+		// Render the row
+		s += fmt.Sprintf("%s [%s] %s\n", cursor, checked, choice)
+	}
+
+	// The footer 
+	s += "\nPress q or CTRL+D to quit.\n"
+
+	// Send the UI for rendering
+	return s
+}
+
+// This funcion si putting all the above components together
+func v1f() {
+	p := tea.NewProgram(initialModel())
+	if _, err := p.Run(); err != nil {
+		fmt.Printf("Alas, there's been an error: %v", err)
+		os.Exit(1)
+	}
 }
