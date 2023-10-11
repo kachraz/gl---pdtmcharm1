@@ -1,2 +1,3 @@
-# gl---pdtmcharm1
-SniffherArmpits - Cuntlick frm https://gitlab.com/sniffliq/pdtmcharm1
+
+<img src="./kh/sw.gif" width="100%" align="center">
+
