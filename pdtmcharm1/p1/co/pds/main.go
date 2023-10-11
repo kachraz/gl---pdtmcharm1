@@ -5,6 +5,12 @@ Entry point of the application
 
 package main
 
+import "fmt"
+
 func main() {
-	V22()
+	// fmt.Println("V3 , from v3.go \n this is from instruct-code-lama-perplexity labs \n")
+	// V3()
+
+	fmt.Println("V3 , from v3.go \n this is from instruct-code-lama-perplexity labs \n -------")
+	V4()
 }
