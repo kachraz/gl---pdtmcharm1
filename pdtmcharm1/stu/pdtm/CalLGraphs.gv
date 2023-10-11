@@ -1,0 +1,117 @@
+digraph gocallvis {
+    label="command-line-arguments";
+    labeljust="l";
+    fontname="Arial";
+    fontsize="14";
+    rankdir="LR";
+    bgcolor="lightgray";
+    style="solid";
+    penwidth="0.5";
+    pad="0.0";
+    nodesep="0.35";
+
+    node [shape="box" style="filled,rounded" fillcolor="honeydew" fontname="Verdana" penwidth="1.0" margin="0.05,0.0"];
+    edge [minlen="2"]
+
+    subgraph "cluster_focus" {
+        label="main";
+labelloc="t";
+labeljust="c";
+fontsize="18";
+bgcolor="#e6ecfa";
+        
+        "command-line-arguments.main" [ label="main" penwidth="0.5" tooltip="command-line-arguments.main | defined in pdtm.go:13\nat pdtm.go:17: calling [(*github.com/projectdiscovery/gologger.Event).Msgf]\nat pdtm.go:32: calling [(*github.com/projectdiscovery/gologger.Event).Msgf]\nat pdtm.go:21: calling [os/signal.Notify]\nat pdtm.go:30: calling [(*github.com/projectdiscovery/pdtm/internal/runner.Runner).Run]\nat pdtm.go:15: calling [github.com/projectdiscovery/pdtm/internal/runner.NewRunner]\nat pdtm.go:17: calling [github.com/projectdiscovery/gologger.Fatal]\nat pdtm.go:32: calling [github.com/projectdiscovery/gologger.Fatal]\nat pdtm.go:23: calling [command-line-arguments.main$1]\nat pdtm.go:14: calling [github.com/projectdiscovery/pdtm/internal/runner.ParseOptions]" fillcolor="lightblue" ]
+        "command-line-arguments.main$1" [ fillcolor="lightblue" label="main$1" style="dotted,filled" tooltip="command-line-arguments.main$1 | defined in pdtm.go:23\nat pdtm.go:25: calling [fmt.Println]\nat pdtm.go:26: calling [(*github.com/projectdiscovery/pdtm/internal/runner.Runner).Close]\nat pdtm.go:27: calling [os.Exit]" ]
+        
+        subgraph "cluster_fmt" {
+        tooltip="package: fmt";
+penwidth="0.8";
+fontname="Tahoma bold";
+label="fmt";
+rank="sink";
+URL="/?f=fmt";
+fontsize="16";
+style="filled";
+fillcolor="#E0FFE1";
+        
+        "fmt.Println" [ tooltip="fmt.Println | defined in print.go:313" fillcolor="#adedad" label="Println" penwidth="1.5" ]
+        
+    }
+
+        subgraph "cluster_github.com/projectdiscovery/gologger" {
+        style="filled";
+label="gologger";
+tooltip="package: github.com/projectdiscovery/gologger";
+rank="sink";
+URL="/?f=github.com/projectdiscovery/gologger";
+penwidth="0.8";
+fontsize="16";
+fillcolor="lightyellow";
+fontname="Tahoma bold";
+        
+        "github.com/projectdiscovery/gologger.Fatal" [ fillcolor="moccasin" label="Fatal" penwidth="1.5" tooltip="github.com/projectdiscovery/gologger.Fatal | defined in gologger.go:182" ]
+        "(*github.com/projectdiscovery/gologger.Event).Msgf" [ fillcolor="moccasin" label="(*Event).Msgf" penwidth="1.5" tooltip="(*github.com/projectdiscovery/gologger.Event).Msgf | defined in gologger.go:138" ]
+        
+    }
+
+        subgraph "cluster_github.com/projectdiscovery/pdtm/internal/runner" {
+        fontname="Tahoma bold";
+rank="sink";
+URL="/?f=github.com/projectdiscovery/pdtm/internal/runner";
+penwidth="0.8";
+style="filled";
+label="runner";
+tooltip="package: github.com/projectdiscovery/pdtm/internal/runner";
+fontsize="16";
+fillcolor="lightyellow";
+        
+        "github.com/projectdiscovery/pdtm/internal/runner.ParseOptions" [ fillcolor="moccasin" label="ParseOptions" penwidth="1.5" tooltip="github.com/projectdiscovery/pdtm/internal/runner.ParseOptions | defined in options.go:58" ]
+        "github.com/projectdiscovery/pdtm/internal/runner.NewRunner" [ fillcolor="moccasin" label="NewRunner" penwidth="1.5" tooltip="github.com/projectdiscovery/pdtm/internal/runner.NewRunner | defined in runner.go:30" ]
+        "(*github.com/projectdiscovery/pdtm/internal/runner.Runner).Close" [ fillcolor="moccasin" label="(*Runner).Close" penwidth="1.5" tooltip="(*github.com/projectdiscovery/pdtm/internal/runner.Runner).Close | defined in runner.go:240" ]
+        "(*github.com/projectdiscovery/pdtm/internal/runner.Runner).Run" [ penwidth="1.5" tooltip="(*github.com/projectdiscovery/pdtm/internal/runner.Runner).Run | defined in runner.go:37" fillcolor="moccasin" label="(*Runner).Run" ]
+        
+    }
+
+        subgraph "cluster_os" {
+        penwidth="0.8";
+fontsize="16";
+fillcolor="#E0FFE1";
+rank="sink";
+label="os";
+tooltip="package: os";
+style="filled";
+fontname="Tahoma bold";
+URL="/?f=os";
+        
+        "os.Exit" [ label="Exit" penwidth="1.5" tooltip="os.Exit | defined in proc.go:62" fillcolor="#adedad" ]
+        
+    }
+
+        subgraph "cluster_os/signal" {
+        fillcolor="#E0FFE1";
+rank="sink";
+label="os/signal";
+tooltip="package: os/signal";
+penwidth="0.8";
+fontsize="16";
+style="filled";
+fontname="Tahoma bold";
+URL="/?f=os/signal";
+        
+        "os/signal.Notify" [ label="Notify" penwidth="1.5" tooltip="os/signal.Notify | defined in signal.go:121" fillcolor="#adedad" ]
+        
+    }
+
+    }
+
+    "command-line-arguments.main" -> "(*github.com/projectdiscovery/gologger.Event).Msgf" [ color="saddlebrown" tooltip="at pdtm.go:17: calling [(*github.com/projectdiscovery/gologger.Event).Msgf]\nat pdtm.go:32: calling [(*github.com/projectdiscovery/gologger.Event).Msgf]" ]
+    "command-line-arguments.main" -> "os/signal.Notify" [ color="saddlebrown" tooltip="at pdtm.go:21: calling [os/signal.Notify]" ]
+    "command-line-arguments.main$1" -> "fmt.Println" [ tooltip="at pdtm.go:25: calling [fmt.Println]" color="saddlebrown" ]
+    "command-line-arguments.main$1" -> "(*github.com/projectdiscovery/pdtm/internal/runner.Runner).Close" [ color="saddlebrown" tooltip="at pdtm.go:26: calling [(*github.com/projectdiscovery/pdtm/internal/runner.Runner).Close]" ]
+    "command-line-arguments.main" -> "(*github.com/projectdiscovery/pdtm/internal/runner.Runner).Run" [ color="saddlebrown" tooltip="at pdtm.go:30: calling [(*github.com/projectdiscovery/pdtm/internal/runner.Runner).Run]" ]
+    "command-line-arguments.main" -> "github.com/projectdiscovery/pdtm/internal/runner.NewRunner" [ color="saddlebrown" tooltip="at pdtm.go:15: calling [github.com/projectdiscovery/pdtm/internal/runner.NewRunner]" ]
+    "command-line-arguments.main" -> "github.com/projectdiscovery/gologger.Fatal" [ tooltip="at pdtm.go:17: calling [github.com/projectdiscovery/gologger.Fatal]\nat pdtm.go:32: calling [github.com/projectdiscovery/gologger.Fatal]" color="saddlebrown" ]
+    "command-line-arguments.main" -> "command-line-arguments.main$1" [ tooltip="at pdtm.go:23: calling [command-line-arguments.main$1]" arrowhead="normalnoneodot" ]
+    "command-line-arguments.main" -> "github.com/projectdiscovery/pdtm/internal/runner.ParseOptions" [ tooltip="at pdtm.go:14: calling [github.com/projectdiscovery/pdtm/internal/runner.ParseOptions]" color="saddlebrown" ]
+    "command-line-arguments.main$1" -> "os.Exit" [ color="saddlebrown" tooltip="at pdtm.go:27: calling [os.Exit]" ]
+}
