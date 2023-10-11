@@ -14,7 +14,7 @@
 
 # Sources
 
-|                                                           🦓                                                            |                                                                                              ♒                                                                                              |
+| 🦓 |♒                                                                                              |
 | :---------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | [Building a Cli Kanban Board with Bubble Tea](https://www.youtube.com/playlist?list=PLLLtqOZfy0pcFoSIeGXO-SOaP9qLqd_H6) |                                                                Using the bubble tea framework , babe whose piss must be sweet                                                                |
 |         [Golang TUI Project Basics - Shopping List - Part I](https://youtu.be/5lxQJS3b38w?si=1JHGxlm1kITLhqYC)          | Will do this first and them move to the one above since they both are related , goal is to finish both of them 24 hours from writing this, trying to bury nose deep in her sweaty ass crack. |
