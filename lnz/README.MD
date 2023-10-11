@@ -5,6 +5,7 @@
 
 1. [W ?](#w-)
 2. [Sources](#sources)
+3. [Dira](#dira)
 
 ---
 
@@ -21,3 +22,8 @@
 
 > Basically that work will be here , later on to be incorporated into your main work
 > Note this is just for the Kanban board , but the actual one which you will do will be after understanding how this was made
+
+# Dira 
+
+As usual this will be the dirs in dis ass
+
