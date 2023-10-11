@@ -34,7 +34,7 @@ type model struct {
 func initialModel() model {
 	return model{
 		// Our to-do list is a grocery list
-		choices: []string{"Fluffy Booty", "Hairy Smelly Pussy", "Sweaty Armpits"},
+		choices: []string{"Fluffy Sweaty Girl Booty", "Hairy Smelly Pussy", "Sweaty Hairy Girl Armpits"},
 
 		// A map which indicates which choices are selected. We're using
 		// the  map like a mathematical set. The keys refer to the indexes
@@ -116,21 +116,22 @@ func (m model) View() string {
 		}
 
 		// Render the row
-		s += fmt.Sprintf("%s [%s] %s\n", cursor, checked, choice)
+		s += fmt.Sprintf("%s  [%s] %s\n", cursor, checked, choice)
 	}
 
-	// The footer 
+	// The footer - Help text goes in here for the program
 	s += "\nPress q or CTRL+D to quit.\n"
 
 	// Send the UI for rendering
+	// 🤩 - LipGloss is being used here for doing the layouts and styling
 	return s
 }
 
 // This funcion si putting all the above components together
 func v1f() {
-	p := tea.NewProgram(initialModel())
+	p := tea.NewProgram(initialModel()) // This is for the model initialization
 	if _, err := p.Run(); err != nil {
-		fmt.Printf("Alas, there's been an error: %v", err)
+		fmt.Printf("😠 You fucked up %v", err)
 		os.Exit(1)
 	}
 }
