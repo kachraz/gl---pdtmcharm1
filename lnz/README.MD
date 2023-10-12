@@ -30,3 +30,4 @@ As usual this will be the dirs in dis ass
 🥇 | 👚
 |:--:|:--:|
 [`sl1`](./sl1/) | Shopping list version 1 
+[`sl2`](./sl2/) | Shopping list version 2 
