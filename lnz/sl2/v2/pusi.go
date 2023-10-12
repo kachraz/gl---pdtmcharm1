@@ -56,5 +56,10 @@ func Piprint2() {
 }
 
 /*
-Third version of piprint , but the actual ansi is here 
+Third version of piprint , but the actual ansi is here https://snips.sh/f/yVqWKywdT2
+- Truying to see if we can use the curl command to pull the file and display it
 */
+
+func Piprint3()  {
+	
+}
