@@ -6,9 +6,9 @@ Main File
 package main
 
 import (
-	V1 "sl1/v1"
+	V2 "sl1/v2"
 )
 
 func main() {
-	V1.V1m()
+	V2.VorkMain()
 }

@@ -2,7 +2,7 @@
 V1 of the work which you are doing , doing it this way for testing stuff which you have alreaady learn
 */
 
-package work
+package v2
 
 import (
 	"fmt"
@@ -15,8 +15,8 @@ import (
 // Application will start here
 
 // This is the main caller of the function
-func V1m() {
-	v1f()
+func VorkMain() {
+	vork()
 }
 
 // ---------------------------------
@@ -128,7 +128,8 @@ func (m model) View() string {
 }
 
 // This funcion si putting all the above components together
-func v1f() {
+func vork() {
+
 	p := tea.NewProgram(initialModel()) // This is for the model initialization
 	if _, err := p.Run(); err != nil {
 		fmt.Printf("😠 You fucked up %v", err)
