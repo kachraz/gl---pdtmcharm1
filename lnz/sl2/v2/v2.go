@@ -130,6 +130,9 @@ func (m model) View() string {
 // This funcion si putting all the above components together
 func vork() {
 
+	// Printing ansi codes from pusi.go
+	Piprint2()
+
 	p := tea.NewProgram(initialModel()) // This is for the model initialization
 	if _, err := p.Run(); err != nil {
 		fmt.Printf("😠 You fucked up %v", err)
