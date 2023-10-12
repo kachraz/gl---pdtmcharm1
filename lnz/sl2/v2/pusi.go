@@ -9,7 +9,10 @@ package v2
 
 import (
 	"bufio"
+	"bytes"
 	"fmt"
+	"log"
+	"os/exec"
 	"strings"
 )
 
@@ -58,8 +61,29 @@ func Piprint2() {
 /*
 Third version of piprint , but the actual ansi is here https://snips.sh/f/yVqWKywdT2
 - Truying to see if we can use the curl command to pull the file and display it
+- This is actually adding more bytes to data I think test it out
 */
 
-func Piprint3()  {
-	
+func Piprint3() {
+
+	// Defining the variables for command an porams
+	progName := "curl"
+	progArgs := "https://snips.sh/f/yVqWKywdT2"
+
+	// Command to execute
+	cmd := exec.Command(progName, progArgs)
+
+	// Get output from command
+	var out bytes.Buffer
+	cmd.Stdout = &out
+
+	// Execute command
+	err := cmd.Run()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// Print output
+	fmt.Println(out.String())
+
 }

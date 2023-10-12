@@ -131,7 +131,7 @@ func (m model) View() string {
 func vork() {
 
 	// Printing ansi codes from pusi.go
-	Piprint2()
+	Piprint3()
 
 	p := tea.NewProgram(initialModel()) // This is for the model initialization
 	if _, err := p.Run(); err != nil {
