@@ -1,0 +1,3 @@
+module sl2t
+
+go 1.21.3
