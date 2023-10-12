@@ -43,8 +43,7 @@ func Piprint() {
 	}
 }
 
-// Second iteration of the function of the above function
-
+// This works
 func Piprint2() {
 
 	scanner := bufio.NewScanner(strings.NewReader(PusiPic))
