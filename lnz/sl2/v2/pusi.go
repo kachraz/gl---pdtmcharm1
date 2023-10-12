@@ -54,3 +54,7 @@ func Piprint2() {
 		fmt.Println("\x1b[0m")
 	}
 }
+
+/*
+Third version of piprint , but the actual ansi is here 
+*/
