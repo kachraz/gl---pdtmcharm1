@@ -6,9 +6,9 @@ Main File
 package main
 
 import (
-	W "sl1/work"
+	V1 "sl1/v1"
 )
 
 func main() {
-	W.V1m()
+	V1.V1m()
 }
