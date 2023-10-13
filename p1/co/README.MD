@@ -13,8 +13,8 @@
 
 # Dira
 
-💛 | 🤼‍♀️
-|:--:|:--:|
-[`ckp`](./ckp/) | Checkin if program is installed or not
-[`spt`](./spt) | Spinner Testing
-[`pds`](./pds/) | Capture output of a command and see various manipulation methods <br> Trying to display this captured content in bubble
+💛 | 🤼‍♀️ | 👙
+|:--:|:--:| :--: |
+[`ckp`](./ckp/) | Checkin if program is installed or not | ![](./ckp/demo/ckp.gif)
+[`spt`](./spt) | Spinner Testing | ![](./spt/demo/spt.gif)
+[`pds`](./pds/) | Capture output of a command and see various manipulation methods <br> Trying to display this captured content in bubble | ![](./pds/demo/pds.gif)
