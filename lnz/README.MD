@@ -32,3 +32,4 @@ As usual this will be the dirs in dis ass
 [`sl1`](./sl1/) | Shopping list version 1 | ![](./sl1/demo/sl1.gif)
 [`sl2`](./sl2/) | Shopping list version 2 | ![](./sl2/demo/sl2.gif)
 [`sl2test`](./sl2test) | Shopping list adding pusi header  | ![](./slt2test/demo/sl2test.gif)
+[`cbt`](./cbt/) | Bubble Tea Command Line demo| ![](./cbt/demo/cbt.gif)
