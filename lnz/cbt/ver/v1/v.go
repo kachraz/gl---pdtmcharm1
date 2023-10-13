@@ -108,11 +108,13 @@ func (m model) View() string {
 	// Tell the user we're doing something.
 	cb := C.New(C.FgBlue).SprintFunc()
 	s := fmt.Sprintf(cb("Raping %s ... "), url)
+	cgm := C.New(C.FgMagenta).SprintFunc()
+	mg := fmt.Sprintf(cgm("\n Order 2 bbw ScatQueens!"))
 
 	// When the server responds with a status, add it to the current line.
 	if m.status > 0 {
 		cg := C.New(C.FgGreen).SprintFunc()
-		s += fmt.Sprintf(cg("%d %s!"), m.status, http.StatusText(m.status))
+		s += fmt.Sprintf(cg("%d %s %v!"), m.status, http.StatusText(m.status), mg)
 	}
 
 	// Send off whatever we came up with above for rendering.
