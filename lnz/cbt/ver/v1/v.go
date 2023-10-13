@@ -16,7 +16,7 @@ import (
 	C "github.com/fatih/color"
 )
 
-const url = "https://charm.sh/"
+const url = "https://tryst.link/"
 
 /*
 ------------------------------------------------------
@@ -44,8 +44,8 @@ func checkServer() tea.Msg {
 	if err != nil {
 		// There was an error making our request. Wrap the error we received
 		// in a message and return it.
-		cr := C.New(C.FgRed).SprintFunc() // Red Color definietion
-		return cr(errMsg{err})
+		// cr := C.New(C.FgRed).SprintFunc() // Red Color definietion
+		return errMsg{err}
 	}
 	// We received a response from the server. Return the HTTP status code
 	// as a message.
