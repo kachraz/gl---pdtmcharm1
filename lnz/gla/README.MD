@@ -1,3 +1,6 @@
+
+![](./src/dba.gif)
+
 # GLA
 
 Using [Glamor](https://github.com/charmbracelet/glamour) , render Markdown in a cli command 
