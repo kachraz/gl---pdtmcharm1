@@ -7,11 +7,10 @@ https://github.com/charmbracelet/glamour
 package main
 
 import (
-	"fmt"
 	V "gl/src/v1"
 )
 
 func main() {
-	fmt.Println("Hello World")
+	V.AssPrint()
 	V.Vmain()
 }
