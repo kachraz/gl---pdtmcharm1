@@ -1,5 +1,5 @@
 
-![](./src/dba.gif)
+![](./src/pic/dba.gif)
 
 # GLA
 
