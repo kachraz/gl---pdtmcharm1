@@ -9,10 +9,11 @@ import (
 	"fmt"
 	// V1 "l/src/v1"
 	// V2 "l/src/v2"
-	V3 "l/src/v3"
+	// V3 "l/src/v3"
+	V4 "l/src/v4"
 )
 
 func main() {
 	fmt.Println("Hello, World!")
-	V3.V3main()
+	V4.V4main()
 }
