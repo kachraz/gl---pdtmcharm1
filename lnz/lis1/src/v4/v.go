@@ -41,7 +41,10 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			}
 		case "q", "ctrl+c":
 			return m, tea.Quit
+		
+			// This is the place where the command needs to be executed
 		case "enter":
+			tea.ExecCommand.Run(m.table.SelectedRow()[1])
 			return m, tea.Batch(
 				tea.Printf("Let's go to %s!", m.table.SelectedRow()[1]),
 			)
