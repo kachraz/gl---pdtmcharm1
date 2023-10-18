@@ -1,5 +1,5 @@
 /*
-Version 2 of testing
+Version 3 of testing
 This is what the orignal looks like
 */
 
@@ -14,13 +14,13 @@ import (
 	"github.com/charmbracelet/lipgloss"
 )
 
-func V2main() {
+func V3main() {
 	mainProg()
 }
 
 var baseStyle = lipgloss.NewStyle().
 	BorderStyle(lipgloss.NormalBorder()).
-	BorderForeground(lipgloss.Color("240"))
+	BorderForeground(lipgloss.Color("200")) // This controls the overall border color
 
 type model struct {
 	table table.Model
@@ -44,7 +44,6 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		case "enter":
 			return m, tea.Batch(
 				tea.Printf("Let's go to %s!", m.table.SelectedRow()[1]),
-				tea.Println("Press Q to exit"),
 			)
 		}
 	}
@@ -201,6 +200,7 @@ func mainProg() {
 	s := table.DefaultStyles()
 	s.Header = s.Header. // Affects header only
 				BorderStyle(lipgloss.NormalBorder()).
+				Foreground(lipgloss.Color("229")).
 				BorderForeground(lipgloss.Color("82")).
 				BorderBottom(true).
 				Bold(false)
@@ -209,6 +209,7 @@ func mainProg() {
 					Background(lipgloss.Color("22")).
 					Bold(false).
 					Italic(true) // Added Italics
+
 	t.SetStyles(s)
 
 	m := model{t}
