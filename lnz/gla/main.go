@@ -7,10 +7,9 @@ https://github.com/charmbracelet/glamour
 package main
 
 import (
-	V "gl/src/v1"
+	V2 "gl/src/v2"
 )
 
 func main() {
-	V.AssPrint()
-	V.Vmain()
+	V2.V2main()
 }
