@@ -44,21 +44,21 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			return m, tea.Quit
 
 		case "enter":
-			// This is your edit
-			selectedItem := m.table.SelectedRow()[0] // This controls which item from the table is being selected starts with 0
-			cmd := exec.Command("echo", selectedItem)
-			// cmd := exec.Command("pwd", selectedItem)
-			output, err := cmd.Output()
+			selectedItem := m.table.SelectedRow()[1] // This controls which item from the table is being selected starts with 0
+			cmd := exec.Command("pdtm", "-install", selectedItem)
+
+			output, err := cmd.CombinedOutput()
+
+			// err := cmd.Run()
 			if err != nil {
 				fmt.Println("[FAIL] ", err)
+				fmt.Println("Output: ", string(output))
 				return m, tea.Quit
 			}
-			fmt.Println(string(output))
+			fmt.Println("Selected: ", selectedItem)
+			fmt.Println("Output: ", string(output))
 			return m, tea.Quit
-			// return m, tea.Batch(
-			// 	tea.Printf("Let's go to %s!", m.table.SelectedRow()[1]),
-			// )
-			// till here ------------
+
 		}
 	}
 	m.table, cmd = m.table.Update(msg)
@@ -92,9 +92,8 @@ func (m model) View() string {
 func TableMain() {
 	columns := []table.Column{
 		{Title: "#", Width: 3},
-		{Title: "Tool", Width: 15},
+		{Title: "Tool", Width: 20},
 		{Title: "What?", Width: 40},
-		// {Title: "Repo", Width: 40},
 	}
 
 	rows := []table.Row{
