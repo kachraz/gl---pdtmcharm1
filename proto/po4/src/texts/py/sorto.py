@@ -16,9 +16,9 @@ data = [
     {"9", "interactsh-client", "Gathering Server"},
     {"10", "interactsh-server", "Gathering Client"},
     {"11", "katana", "Crawl/Spider Framework"},
-    {"12", "XX", "xxxx"},
-    {"X", "XX", "xxxx"},
-    {"X", "XX", "xxxx"},
+    {"12", "mapcidr", "Go Cli/Lib Ops Management CIDR"},
+    {"13", "naabu", "Go Por Scanner"},
+    {"14", "XX", "xxxx"},
     {"X", "XX", "xxxx"},
     {"X", "XX", "xxxx"},
     {"X", "XX", "xxxx"},
@@ -33,8 +33,8 @@ data = [
 
 
 
-# 12. mapcidr (not supported)
-# 13. naabu (not installed)
+
+
 # 14. notify (not installed)
 # 15. nuclei (not installed)
 # 16. pdtm (not installed)
