@@ -34,3 +34,4 @@ As usual this will be the dirs in dis ass
 [`sl2test`](./sl2test) | Shopping list adding pusi header  | ![](./slt2test/demo/sl2test.gif)
 [`cbt`](./cbt/) | Bubble Tea Command Line demo| ![](./cbt/demo/cbt.gif)
 [`gla`](./gla/) | Glamour testing , which is render markdown in cli, note binary is huge about 16mb as such  | ![](./gla/demo/gla.gif) <br> Version 2 of Above ![Version2](https://vhs.charm.sh/vhs-1XkHE9N1khJBzG5FXgqYJP.gif)
+[`lis1`](./lis1/) | Colorful List Testing, this one only prints messages to the screen |![](lis1/demo/lis.gif)
