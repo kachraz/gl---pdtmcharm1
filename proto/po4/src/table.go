@@ -13,6 +13,7 @@ import (
 	"github.com/charmbracelet/bubbles/table"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
+	C "github.com/fatih/color"
 )
 
 func TableFuncMain() {
@@ -30,6 +31,12 @@ type model struct {
 func (m model) Init() tea.Cmd { return nil }
 
 func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
+
+	// Color Definitions
+	cr := C.New(C.FgRed).SprintFunc()
+	chg := C.New(C.FgHiGreen).SprintFunc()
+	cm := C.New(C.FgMagenta).SprintFunc()
+
 	var cmd tea.Cmd
 	switch msg := msg.(type) {
 	case tea.KeyMsg:
@@ -51,12 +58,15 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 			// err := cmd.Run()
 			if err != nil {
-				fmt.Println("[FAIL] ", err)
+				cr := C.New(C.FgRed).SprintFunc() // Red color for warnings
+				fmt.Println(cr("[FAIL] ", err))
+
 				fmt.Println("Output: ", string(output))
 				return m, tea.Quit
 			}
-			fmt.Println("Selected: ", selectedItem)
-			fmt.Println("Output: ", string(output))
+			fmt.Println(cm("Selected: ", selectedItem))
+			fmt.Println(chg(string(output)))
+			fmt.Println(cr("Use pdtm -r <name> to remove"))
 			return m, tea.Quit
 
 		}
