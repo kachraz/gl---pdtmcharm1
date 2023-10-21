@@ -50,7 +50,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			// cmd := exec.Command("pwd", selectedItem)
 			output, err := cmd.Output()
 			if err != nil {
-				fmt.Println("Fucker bastard !", err)
+				fmt.Println("[FAIL] ", err)
 				return m, tea.Quit
 			}
 			fmt.Println(string(output))
@@ -91,19 +91,19 @@ func (m model) View() string {
 // This is the main program and entry poin , this will go up in V1main()
 func TableMain() {
 	columns := []table.Column{
-		{Title: "Rank", Width: 4},
-		{Title: "City", Width: 10},
-		{Title: "Country", Width: 10},
-		{Title: "Population", Width: 20},
+		{Title: "#", Width: 3},
+		{Title: "Tool", Width: 15},
+		{Title: "What?", Width: 40},
+		// {Title: "Repo", Width: 40},
 	}
 
 	rows := []table.Row{
-		{"1", "aix", "AIx is a cli tool to interact with Large Language Models (LLM) APIs.", "github.com/projectdiscovery/aix"},
-		{"2", "alterx", "Fast and customizable subdomain wordlist generator using DSL.", "github.com/projectdiscovery/alterx"},
-		{"3", "asnmap", "Go CLI and Library for quickly mapping organization network ranges using", "github.com/projectdiscovery/asnmap"},
-		{"4", "cdncheck", "Tool for identifying the technology associated with dns / ip network addresses.", "github.com/projectdiscovery/cdncheck"},
-		{"5", "chaos-client", "Go client to communicate with Chaos dataset API.", "github.com/projectdiscovery/chaos-client"},
-		{"6", "cloudlist", "multi-cloud tool for getting Assets from Cloud Providers", "github.com/projectdiscovery/cloudlist"},
+		{"1", "aix", "AIx is a cli tool to interact with Large Language Models (LLM) APIs."},
+		{"2", "alterx", "Fast and customizable subdomain wordlist generator using DSL."},
+		{"3", "asnmap", "Go CLI and Library for quickly mapping organization network ranges using"},
+		{"4", "cdncheck", "Tool for identifying the technology associated with dns / ip network addresses."},
+		{"5", "chaos-client", "Go client to communicate with Chaos dataset API."},
+		{"6", "cloudlist", "multi-cloud tool for getting Assets from Cloud Providers"},
 	}
 
 	t := table.New(
