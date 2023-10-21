@@ -22,7 +22,7 @@ func PdtsMain() {
 
 // Main variable that represents the program
 var (
-	programName = "pdtm"
+	programName = "pdto"
 	programArgs = " "
 	s           = `
 go install -v github.com/projectdiscovery/pdtm/cmd/pdtm@latest
@@ -67,7 +67,7 @@ func PdtsChecker() {
 	if err != nil {
 		// pdts not installed
 		logger.Printf(cr("[FAIL] %s"), err)
-		fmt.Println(cr("[FAIL] PDTM not installed!" + s))
+		fmt.Println(cr("[FAIL] PDTM - Project Discovery Open Source Tool Manager - not installed!" + s))
 	} else {
 
 		// Print success
