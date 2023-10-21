@@ -9,6 +9,7 @@ package src
 
 import (
 	"fmt"
+	"log"
 	"os"
 	"os/exec"
 
@@ -21,36 +22,29 @@ func PdtsMain() {
 
 // Main variable that represents the program
 var (
-	programName = "pdtm"
+	programName = "pdts"
 	programArgs = " "
 	s           = `
-	go install -v github.com/projectdiscovery/pdtm/cmd/pdtm@latest
+go install -v github.com/projectdiscovery/pdtm/cmd/pdtm@latest
+	`
+	Ban = `
+	
+                ____          
+     ____  ____/ / /_____ ___ 
+    / __ \/ __  / __/ __ __  \
+   / /_/ / /_/ / /_/ / / / / /
+  / .___/\__,_/\__/_/ /_/ /_/ 
+ /_/                         
+
+                projectdiscovery.io
 	`
 )
 
-// Check if pdts is installed and then run it
-// func PdtsChecker() {
-
-// 	// Color definitions
-// 	cr := C.New(C.FgRed).SprintFunc()
-// 	cg := C.New(C.FgGreen).SprintFunc()
-
-// 	// Create a new logger with the custom color function
-// 	logger := log.New(os.Stderr, "", 0)
-// 	logger.SetFlags(0) // Remove default timestamp and file name flags
-// 	logger.SetOutput(C.Output)
-
-// 	cmd := exec.Command(programName, programArgs)
-// 	err := cmd.Run()
-// 	if err != nil {
-// 		logger.Fatalf(cr("[FAIL] %v \n %v"), cr(err), cr(s))
-// 		fmt.Printf("Install - go get ....\n")
-// 	}
-// 	logger.Println(cg("[OK] Program is installed"))
-// }
-
-// From claude
+// From Claude and Codeium
 func PdtsChecker() {
+
+	// Print header of program
+	// fmt.Println(Ban)
 
 	//Color Definitions
 	cr := C.New(C.FgRed).SprintFunc()
@@ -61,13 +55,19 @@ func PdtsChecker() {
 
 	// Set stdout to print output
 	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr // This also prints out the stderr
+
+	// Settingup the logger here to print logger message also
+	logger := log.New(os.Stderr, "", 0)
+	cmd.Stderr = logger.Writer()
 
 	// Run command
 	err := cmd.Run()
 
 	if err != nil {
 		// pdts not installed
-		fmt.Println(cr("Pdts not installed!"))
+		logger.Printf(cr("[FAIL] %s"), err)
+		fmt.Println(cr("[FAIL] PDTM not installed!" + s))
 	} else {
 
 		// Print success
