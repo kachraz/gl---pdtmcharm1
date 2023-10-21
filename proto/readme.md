@@ -28,4 +28,7 @@ Dira | W ? | Comment
 
 > Actual directory where you are doing the prototyping and related notes 
 
-
+N | W ? | Comment
+:--: | :--: | :--:
+[`po1`](./po1/) | 1dt prototype | Got banner and pdtm working , need to think about the full banner , testing that one our in the next one 
+[`po2`](./po2/)  | 2nd Prototype
