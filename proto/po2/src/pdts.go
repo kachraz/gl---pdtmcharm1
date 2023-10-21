@@ -22,7 +22,7 @@ func PdtsMain() {
 
 // Main variable that represents the program
 var (
-	programName = "pdts"
+	programName = "pdtm"
 	programArgs = " "
 	s           = `
 go install -v github.com/projectdiscovery/pdtm/cmd/pdtm@latest
