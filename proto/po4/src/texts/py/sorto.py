@@ -5,15 +5,30 @@ This python file is being written to alphabetize some entries
 '''
 
 data = [
-    {"1", "Tokyo", "Japan", "37,274,000"},
     {"1", "aix", "AIx is a cli tool to interact with Large Language Models (LLM) APIs.", "github.com/projectdiscovery/aix"},
-    {"2", "aalterx", "", "github.com/projectdiscovery/aix"},
+    {"2", "alterx", "Fast and customizable subdomain wordlist generator using DSL.", "github.com/projectdiscovery/alterx"},
+    {"3", "asnmap", "Go CLI and Library for quickly mapping organization network ranges using", "github.com/projectdiscovery/asnmap"},
+    {"4", "cdncheck", "Tool for identifying the technology associated with dns / ip network addresses.", "github.com/projectdiscovery/cdncheck"},
+    {"5", "chaos-client", "Go client to communicate with Chaos dataset API.", "github.com/projectdiscovery/chaos-client"},
+    {"6", "cloudlist", "multi-cloud tool for getting Assets from Cloud Providers", "github.com/projectdiscovery/cloudlist"},
+    {"X", "XX", "xxxx", "github.com/projectdiscovery/x/x"},
+    {"X", "XX", "xxxx", "github.com/projectdiscovery/x/x"},
+    {"X", "XX", "xxxx", "github.com/projectdiscovery/x/x"},
+    {"X", "XX", "xxxx", "github.com/projectdiscovery/x/x"},
+    {"X", "XX", "xxxx", "github.com/projectdiscovery/x/x"},
+    {"X", "XX", "xxxx", "github.com/projectdiscovery/x/x"},
+    {"X", "XX", "xxxx", "github.com/projectdiscovery/x/x"},
+    {"X", "XX", "xxxx", "github.com/projectdiscovery/x/x"},
+    {"X", "XX", "xxxx", "github.com/projectdiscovery/x/x"},
+    {"X", "XX", "xxxx", "github.com/projectdiscovery/x/x"},
+    {"X", "XX", "xxxx", "github.com/projectdiscovery/x/x"},
+    {"X", "XX", "xxxx", "github.com/projectdiscovery/x/x"},
+    {"X", "XX", "xxxx", "github.com/projectdiscovery/x/x"},
+    {"X", "XX", "xxxx", "github.com/projectdiscovery/x/x"},
+    {"X", "XX", "xxxx", "github.com/projectdiscovery/x/x"},
+    
+]
 
-    1. aix (latest) (0.0.3)
-2. alterx (not installed)
-3. asnmap (not installed)
-4. cdncheck (not installed)
-5. chaos-client (not installed)
 6. cloudlist (not installed)
 7. dnsx (not installed)
 8. httpx (not installed)
