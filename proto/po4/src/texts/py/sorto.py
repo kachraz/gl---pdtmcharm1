@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-'''
+"""
 This python file is being written to alphabetize some entries 
-'''
+"""
 
 data = [
     {"1", "aix", "Interact LLM APIs"},
@@ -19,28 +19,15 @@ data = [
     {"12", "mapcidr", "Go Cli/Lib Ops Management CIDR"},
     {"13", "naabu", "Go Por Scanner"},
     {"14", "notify", "Output Streamer"},
-    {"15", "nuclei", "xxxx"},
-    {"X", "XX", "xxxx"},
-    {"X", "XX", "xxxx"},
-    {"X", "XX", "xxxx"},
-    {"X", "XX", "xxxx"},
-    {"X", "XX", "xxxx"},
-    {"X", "XX", "xxxx"},
+    {"15", "nuclei", "YAML/DSL Vuln Scanner"},
+    {"16", "pdtm", "Project Discovery Tool Manager"},
+    {"17", "proxify", "Swiss Army Knife Proxy"},
+    {"18", "shuffledns", "Go massdns wrapper"},
+    {"19", "simplehttpserver", "Go Alernative to python httpserver"},
+    {"20", "subfinder", "Subdomain Discovery"},
+    {"21", "tlsx", "Tls Grabber"},
+    {"22", "uncover", "Exposed host disvoery via search"},
 ]
 
 
-
-
-
-
-
-
-
-# 15. nuclei (not installed)
-# 16. pdtm (not installed)
-# 17. proxify (not installed)
-# 18. shuffledns (not installed)
-# 19. simplehttpserver (not installed)
-# 20. subfinder (not installed)
-# 21. tlsx (not installed)
 # 22. uncover (not installed)
