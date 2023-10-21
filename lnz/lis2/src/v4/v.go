@@ -44,6 +44,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			return m, tea.Quit
 
 		case "enter":
+			// This is your edit
 			selectedItem := m.table.SelectedRow()[0] // This controls which item from the table is being selected starts with 0
 			cmd := exec.Command("echo", selectedItem)
 			// cmd := exec.Command("pwd", selectedItem)
@@ -57,6 +58,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			// return m, tea.Batch(
 			// 	tea.Printf("Let's go to %s!", m.table.SelectedRow()[1]),
 			// )
+			// till here ------------
 		}
 	}
 	m.table, cmd = m.table.Update(msg)
