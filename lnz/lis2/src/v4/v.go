@@ -44,7 +44,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			return m, tea.Quit
 
 		case "enter":
-			selectedItem := m.table.SelectedRow()[2]
+			selectedItem := m.table.SelectedRow()[0] // This controls which item from the table is being selected starts with 0
 			cmd := exec.Command("echo", selectedItem)
 			// cmd := exec.Command("pwd", selectedItem)
 			output, err := cmd.Output()
