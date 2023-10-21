@@ -8,6 +8,7 @@ package src
 import (
 	"fmt"
 	"os"
+	"os/exec"
 
 	"github.com/charmbracelet/bubbles/table"
 	tea "github.com/charmbracelet/bubbletea"
@@ -41,12 +42,21 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			}
 		case "q", "ctrl+c":
 			return m, tea.Quit
-		
-			// This is the place where the command needs to be executed
+
 		case "enter":
-			return m, tea.Batch(
-				tea.Printf("Let's go to %s!", m.table.SelectedRow()[1]),
-			)
+			selectedItem := m.table.SelectedRow()[1]
+			cmd := exec.Command("echo", selectedItem)
+			// cmd := exec.Command("pwd", selectedItem)
+			output, err := cmd.Output()
+			if err != nil {
+				fmt.Println("Fucker bastard !", err)
+				return m, tea.Quit
+			}
+			fmt.Println(string(output))
+			return m, tea.Quit
+			// return m, tea.Batch(
+			// 	tea.Printf("Let's go to %s!", m.table.SelectedRow()[1]),
+			// )
 		}
 	}
 	m.table, cmd = m.table.Update(msg)
