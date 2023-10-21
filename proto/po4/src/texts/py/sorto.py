@@ -15,8 +15,8 @@ data = [
     {"8", "httpx", "HTTP Toolkit"},
     {"9", "interactsh-client", "Gathering Server"},
     {"10", "interactsh-server", "Gathering Client"},
-    {"X", "XX", "xxxx"},
-    {"X", "XX", "xxxx"},
+    {"11", "katana", "Crawl/Spider Framework"},
+    {"12", "XX", "xxxx"},
     {"X", "XX", "xxxx"},
     {"X", "XX", "xxxx"},
     {"X", "XX", "xxxx"},
@@ -32,7 +32,7 @@ data = [
 
 
 
-# 11. katana (not installed)
+
 # 12. mapcidr (not supported)
 # 13. naabu (not installed)
 # 14. notify (not installed)
