@@ -32,4 +32,5 @@ N | W ? | Comment
 :--: | :--: | :--:
 [`po1`](./po1/) | 1dt prototype | Got banner and pdtm working , need to think about the full banner , testing that one our in the next one 
 [`po2`](./po2/)  | 2nd Prototype | here both the bannner and pdtm with proper error loggin is working , now will have ot test out the next , which is adding the table
-[`po3`](./po3/) | 3rd Protype | Adding table
+[`po3`](./po3/) | 3rd Protype | Adde Full banner with adjustments , full output of pdtm command , and table below
+[`po4`]
