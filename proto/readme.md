@@ -9,6 +9,7 @@
 ----
 1. [Huh ?](#huh-)
    1. [Pieces](#pieces)
+2. [Prototyping Folders](#prototyping-folders)
 
 ----
 
@@ -22,4 +23,9 @@ Dira | W ? | Comment
 :--: | :--: | :--:
 [`lis2`](../lnz/lis2/) | This v4 file lets you select an item from the table and then print it out | This functionality will be used in your final cmd 
 [`ckp`](../p1/co/ckp/) | Check if a program exists | This is to check if the command you want exists in the system or not 
+
+# Prototyping Folders 
+
+> Actual directory where you are doing the prototyping and related notes 
+
 
