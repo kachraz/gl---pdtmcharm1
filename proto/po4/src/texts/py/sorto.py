@@ -5,8 +5,8 @@ This python file is being written to alphabetize some entries
 '''
 
 data = [
-    {"1", "aix", "Interact with LLM APIs"},
-    {"2", "alterx", "Subdomain wordlist generator using DSL."},
+    {"1", "aix", "Interact LLM APIs"},
+    {"2", "alterx", "Subdomain wordlist gen using DSL."},
     {"3", "asnmap", "Go Cli/Lib map network ranges ASN"},
     {"4", "cdncheck", "ID tech with dns / ip."},
     {"5", "chaos-client", "Go client comms Chaos dataset API."},
@@ -18,8 +18,8 @@ data = [
     {"11", "katana", "Crawl/Spider Framework"},
     {"12", "mapcidr", "Go Cli/Lib Ops Management CIDR"},
     {"13", "naabu", "Go Por Scanner"},
-    {"14", "XX", "xxxx"},
-    {"X", "XX", "xxxx"},
+    {"14", "notify", "Output Streamer"},
+    {"15", "nuclei", "xxxx"},
     {"X", "XX", "xxxx"},
     {"X", "XX", "xxxx"},
     {"X", "XX", "xxxx"},
@@ -35,7 +35,7 @@ data = [
 
 
 
-# 14. notify (not installed)
+
 # 15. nuclei (not installed)
 # 16. pdtm (not installed)
 # 17. proxify (not installed)
