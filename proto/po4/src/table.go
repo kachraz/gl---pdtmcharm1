@@ -64,7 +64,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				fmt.Println("Output: ", string(output))
 				return m, tea.Quit
 			}
-			fmt.Println(cm("Selected: ", selectedItem))
+			fmt.Println(cm("[SELECTED]", selectedItem))
 			fmt.Println(chg(string(output)))
 			fmt.Println(cr("Use pdtm -r <name> to remove"))
 			return m, tea.Quit
