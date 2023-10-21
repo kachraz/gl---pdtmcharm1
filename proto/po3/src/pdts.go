@@ -71,7 +71,7 @@ func PdtsChecker() {
 	} else {
 
 		// Print success
-		fmt.Println(chg("\nRan pdts successfully!\n ---"))
+		fmt.Println(chg("\n[OK] Ran PDTS Successfully!...Choose Install below..."))
 		TableFuncMain()
 	}
 
