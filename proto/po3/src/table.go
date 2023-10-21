@@ -75,7 +75,7 @@ adding the navigation help at the end of the table
 var helpStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("241")).Render
 
 func (m model) helpView() string {
-	return helpStyle("\n  ↑/↓: Navigate • q: Quit • Enter to Select Install\n")
+	return helpStyle("\n  ↑/↓: Navigate • q: Quit • Enter: to Select Install\n")
 }
 
 // ---------------------------- Your Edits ends --------------------------
