@@ -26,18 +26,7 @@ var (
 	programArgs = " "
 	s           = `
 go install -v github.com/projectdiscovery/pdtm/cmd/pdtm@latest
-	`
-	Ban = `
-	
-                ____          
-     ____  ____/ / /_____ ___ 
-    / __ \/ __  / __/ __ __  \
-   / /_/ / /_/ / /_/ / / / / /
-  / .___/\__,_/\__/_/ /_/ /_/ 
- /_/                         
-
-                projectdiscovery.io
-	`
+`
 )
 
 // From Claude and Codeium
