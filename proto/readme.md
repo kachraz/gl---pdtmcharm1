@@ -22,7 +22,7 @@
 Dira | W ? | Comment
 :--: | :--: | :--:
 [`lis2`](../lnz/lis2/) | This v4 file lets you select an item from the table and then print it out | This functionality will be used in your final cmd 
-[`ckp`](../p1/co/ckp/) | Check if a program exists | This is to check if the command you want exists in the system or not 
+[`ckp`](../p1/co/ckp/) | Check if a program exists | This is to check if the command you want exists in the system or not  
 
 # Prototyping Folders 
 
@@ -31,4 +31,5 @@ Dira | W ? | Comment
 N | W ? | Comment
 :--: | :--: | :--:
 [`po1`](./po1/) | 1dt prototype | Got banner and pdtm working , need to think about the full banner , testing that one our in the next one 
-[`po2`](./po2/)  | 2nd Prototype
+[`po2`](./po2/)  | 2nd Prototype | here both the bannner and pdtm with proper error loggin is working , now will have ot test out the next , which is adding the table
+[`po3`](./po3/) | 3rd Protype | Adding table
