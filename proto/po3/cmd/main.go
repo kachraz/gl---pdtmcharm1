@@ -11,5 +11,4 @@ import (
 func main() {
 	B.Banmain()
 	B.PdtsMain()
-	B.Tablemain()
 }

@@ -72,6 +72,7 @@ func PdtsChecker() {
 
 		// Print success
 		fmt.Println(chg("\nRan pdts successfully!\n ---"))
+		TableFuncMain()
 	}
 
 }
