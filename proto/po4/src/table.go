@@ -72,7 +72,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 This is ou addition of the help functions taken from gla ,
 adding the navigation help at the end of the table
 */
-var helpStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("241")).Render
+var helpStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("200")).Render
 
 func (m model) helpView() string {
 	return helpStyle("\n  ↑/↓: Navigate • q: Quit • Enter: to Select Install\n")
