@@ -1,5 +1,7 @@
 /*
-Ths is the code for implementing a spinner
+シ MXIUM SYSTEMS シ
+progressbar.go
+Progress bar animation
 */
 
 package src
@@ -19,7 +21,8 @@ const (
 	maxWidth = 60 // Controls width of the percentage bar
 )
 
-func SpinMain() {
+// Progress bar animation code
+func ProgMain() {
 	m := model2{
 		progress: progress.New(progress.WithDefaultGradient()),
 	}
@@ -57,12 +60,9 @@ func (m model2) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			return m, tea.Quit
 		}
 
-		// Note that you can also use progress.Model.SetPercent to set the
-		// percentage value explicitly, too.
 		cmd := m.progress.IncrPercent(0.50)
 		return m, tea.Batch(tickCmd(), cmd)
 
-	// FrameMsg is sent when the progress bar wants to animate itself
 	case progress.FrameMsg:
 		progressModel, cmd := m.progress.Update(msg)
 		m.progress = progressModel.(progress.Model)

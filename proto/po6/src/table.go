@@ -66,7 +66,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 			// Progress bar animation
 			fmt.Println(cm("\n\n [INSTALL] ", selectedItem, " - ", selectedItemDescription))
-			SpinMain()
+			ProgMain()
 
 			if err != nil {
 				cr := C.New(C.FgRed).SprintFunc()
