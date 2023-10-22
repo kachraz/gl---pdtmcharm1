@@ -57,7 +57,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			output, err := cmd.CombinedOutput()
 
 			// Adding a spinner when installation going on
-			fmt.Println(cm("\n\n [INSTALLING]: ", selectedItem))
+			fmt.Println(cm("\n\n [INSTALL] ", selectedItem))
 			SpinMain()
 
 			// err := cmd.Run()
@@ -69,7 +69,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				return m, tea.Quit
 			}
 			fmt.Println(chg(string(output)))
-			fmt.Println(cr("Use pdtm -r <name> to remove"))
+			fmt.Println(cr("[HINT] Use pdtm -r <name> to remove"))
 			return m, tea.Quit
 
 		}
