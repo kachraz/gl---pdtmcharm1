@@ -1,7 +1,7 @@
 
-# Po6
+# 7
 
-6th protoype based on po5
+7th protoype based of 6th 
 
 # Directory Struture 
 
@@ -12,5 +12,6 @@ N | HUh
 
 # Other notes
 
-1. Cleaned up names and added annotations
-2. Added description of selected program when chosen 
+1. Remove unnecessary files 
+
+
