@@ -136,25 +136,21 @@ func TableMain() {
 		table.WithColumns(columns),
 		table.WithRows(rows),
 		table.WithFocused(true),
-		table.WithHeight(10), // This controls number of rows
+		table.WithHeight(10), 
 	)
 
-	/*
-		This section is the style it follows the ANSI 256 Color Codes
-		https://www.ditig.com/256-colors-cheat-sheet
-	*/
 	s := table.DefaultStyles()
-	s.Header = s.Header. // Affects header only
+	s.Header = s.Header. 
 				BorderStyle(lipgloss.NormalBorder()).
 				Foreground(lipgloss.Color("229")).
 				BorderForeground(lipgloss.Color("82")).
 				BorderBottom(true).
 				Bold(false)
-	s.Selected = s.Selected. // Affects Selections only
+	s.Selected = s.Selected. 
 					Foreground(lipgloss.Color("229")).
 					Background(lipgloss.Color("22")).
 					Bold(false).
-					Italic(true) // Added Italics
+					Italic(true) 
 
 	t.SetStyles(s)
 
