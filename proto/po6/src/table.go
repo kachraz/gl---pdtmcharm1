@@ -78,6 +78,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			fmt.Println(chg(string(output)))
 			fmt.Printf(chg("[TEST] > Run %v --version"), selectedItem)
 			fmt.Println(cr("\n[HINT] Use pdtm -r <name> to remove"))
+			BanrEnd()
 			return m, tea.Quit
 
 		}
@@ -136,21 +137,21 @@ func TableMain() {
 		table.WithColumns(columns),
 		table.WithRows(rows),
 		table.WithFocused(true),
-		table.WithHeight(10), 
+		table.WithHeight(10),
 	)
 
 	s := table.DefaultStyles()
-	s.Header = s.Header. 
-				BorderStyle(lipgloss.NormalBorder()).
-				Foreground(lipgloss.Color("229")).
-				BorderForeground(lipgloss.Color("82")).
-				BorderBottom(true).
-				Bold(false)
-	s.Selected = s.Selected. 
-					Foreground(lipgloss.Color("229")).
-					Background(lipgloss.Color("22")).
-					Bold(false).
-					Italic(true) 
+	s.Header = s.Header.
+		BorderStyle(lipgloss.NormalBorder()).
+		Foreground(lipgloss.Color("229")).
+		BorderForeground(lipgloss.Color("82")).
+		BorderBottom(true).
+		Bold(false)
+	s.Selected = s.Selected.
+		Foreground(lipgloss.Color("229")).
+		Background(lipgloss.Color("22")).
+		Bold(false).
+		Italic(true)
 
 	t.SetStyles(s)
 
