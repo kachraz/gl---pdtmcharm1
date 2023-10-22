@@ -56,6 +56,10 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 			output, err := cmd.CombinedOutput()
 
+			// Adding a spinner when installation going on
+			fmt.Println(cm("\n\n [INSTALLING]: ", selectedItem))
+			SpinMain()
+
 			// err := cmd.Run()
 			if err != nil {
 				cr := C.New(C.FgRed).SprintFunc() // Red color for warnings
@@ -64,7 +68,6 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				fmt.Println("Output: ", string(output))
 				return m, tea.Quit
 			}
-			fmt.Println(cm("[SELECTED]", selectedItem))
 			fmt.Println(chg(string(output)))
 			fmt.Println(cr("Use pdtm -r <name> to remove"))
 			return m, tea.Quit
@@ -75,22 +78,12 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	return m, cmd
 }
 
-// ---------------------------- Your Edits Start --------------------------
-// ---------------------------- Your Edits Start --------------------------
-// ---------------------------- Your Edits Start --------------------------
-/*
-This is ou addition of the help functions taken from gla ,
-adding the navigation help at the end of the table
-*/
+// Help Text
 var helpStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("200")).Render
 
 func (m model) helpView() string {
 	return helpStyle("\n  ↑/↓: Navigate • q: Quit • Enter: to Select Install\n")
 }
-
-// ---------------------------- Your Edits ends --------------------------
-// ---------------------------- Your Edits ends --------------------------
-// ---------------------------- Your Edits ends --------------------------
 
 // This controls the views of the application
 // helpView() added here
@@ -158,8 +151,9 @@ func TableMain() {
 	t.SetStyles(s)
 
 	m := model{t}
+	cr := C.New(C.FgRed).SprintFunc()
 	if _, err := tea.NewProgram(m).Run(); err != nil {
-		fmt.Println("Error running program:", err)
+		fmt.Println(cr("Error running program:", err))
 		os.Exit(1)
 	}
 }
