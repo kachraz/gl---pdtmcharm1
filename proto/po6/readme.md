@@ -1,7 +1,7 @@
 
-# Po5
+# Po6
 
-5th proto with majority of the functions implemented 
+6th protoype based on po5
 
 # Directory Struture 
 
@@ -11,3 +11,6 @@ N | HUh
 [`cmd`](./cmd/) | has main entry point 
 
 # Other notes
+
+1. Cleaned up names and added annotations
+2. Added description of selected program when chosen 
