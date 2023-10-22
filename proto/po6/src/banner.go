@@ -1,6 +1,7 @@
 /*
-Ban.go
-This file is for displaying the banner
+シ MXIUM SYSTEMS シ
+banner.go
+Printing out banners
 */
 
 package src
@@ -12,10 +13,10 @@ import (
 )
 
 func Banmain() {
-	Bussy()
+	Banr()
 }
 
-// This is the main function for pringing the pussy
+// Banner ansi escape squences
 
 var (
 	banr = `
@@ -27,7 +28,8 @@ var (
 `
 )
 
-func Bussy() {
+// Main Banner function that uses ansi sequences
+func Banr() {
 
 	scanner := bufio.NewScanner(strings.NewReader(banr))
 

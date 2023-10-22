@@ -1,6 +1,7 @@
 /*
+シ MXIUM SYSTEMS シ
 table.go
-This file has the actual table code
+Code for printing the table
 */
 
 package src
@@ -20,6 +21,8 @@ func TableFuncMain() {
 	TableMain()
 }
 
+// Table styles
+
 var baseStyle = lipgloss.NewStyle().
 	BorderStyle(lipgloss.NormalBorder()).
 	BorderForeground(lipgloss.Color("200")) // This controls the overall border color
@@ -27,6 +30,8 @@ var baseStyle = lipgloss.NewStyle().
 type model struct {
 	table table.Model
 }
+
+// Bubbletea table code here
 
 func (m model) Init() tea.Cmd { return nil }
 
@@ -50,21 +55,22 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			return m, tea.Quit
 
 		case "enter":
-			selectedItem := m.table.SelectedRow()[1] // This controls which item from the table is being selected starts with 0
-			selectedItemDescription := m.table.SelectedRow()[2]
-			cmd := exec.Command("pdtm", "-install", selectedItem)
 
+			// Selecting appropriate items from table
+			selectedItem := m.table.SelectedRow()[1]
+			selectedItemDescription := m.table.SelectedRow()[2]
+
+			// Executing selection and display output
+			cmd := exec.Command("pdtm", "-install", selectedItem)
 			output, err := cmd.CombinedOutput()
 
-			// Adding a spinner when installation going on
-			fmt.Println(cm("\n\n [INSTALL] ", selectedItem, " - " ,selectedItemDescription))
+			// Progress bar animation
+			fmt.Println(cm("\n\n [INSTALL] ", selectedItem, " - ", selectedItemDescription))
 			SpinMain()
 
-			// err := cmd.Run()
 			if err != nil {
-				cr := C.New(C.FgRed).SprintFunc() // Red color for warnings
+				cr := C.New(C.FgRed).SprintFunc()
 				fmt.Println(cr("[FAIL] ", err))
-
 				fmt.Println("Output: ", string(output))
 				return m, tea.Quit
 			}
@@ -93,7 +99,7 @@ func (m model) View() string {
 	return baseStyle.Render(m.table.View()) + "\n" + m.helpView() + "\n"
 }
 
-// This is the main program and entry poin , this will go up in V1main()
+// Table rendering code , rows are displayed
 func TableMain() {
 	columns := []table.Column{
 		{Title: "#", Width: 3},
