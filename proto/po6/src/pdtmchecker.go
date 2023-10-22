@@ -1,8 +1,7 @@
 /*
-pdts.go
-This file is for
-1. Checking if pdts is installed or not
-and then it will install it
+シ MXIUM SYSTEMS シ
+pdtmchecker.go
+Checks in pdtm in installed
 */
 
 package src
@@ -20,7 +19,6 @@ func PdtsMain() {
 	PdtsChecker()
 }
 
-// Main variable that represents the program
 var (
 	programName = "pdtm"
 	programArgs = " "
@@ -29,37 +27,27 @@ go install -v github.com/projectdiscovery/pdtm/cmd/pdtm@latest
 `
 )
 
-// From Claude and Codeium
+// Main Function
 func PdtsChecker() {
 
-	// Print header of program
-	// fmt.Println(Ban)
-
-	//Color Definitions
 	cr := C.New(C.FgRed).SprintFunc()
 	chg := C.New(C.FgHiGreen).SprintFunc()
 
-	// pdts command
 	cmd := exec.Command(programName, programArgs)
 
-	// Set stdout to print output
 	cmd.Stdout = os.Stdout
-	cmd.Stderr = os.Stderr // This also prints out the stderr
+	cmd.Stderr = os.Stderr
 
-	// Settingup the logger here to print logger message also
 	logger := log.New(os.Stderr, "", 0)
 	cmd.Stderr = logger.Writer()
 
-	// Run command
 	err := cmd.Run()
 
 	if err != nil {
-		// pdts not installed
 		logger.Printf(cr("[FAIL] %s"), err)
 		fmt.Println(cr("[FAIL] PDTM - Project Discovery Open Source Tool Manager - not installed!" + s))
 	} else {
 
-		// Print success
 		fmt.Println(chg("\n[OK] Ran PDTS Successfully!...Choose Install below..."))
 		TableFuncMain()
 	}
