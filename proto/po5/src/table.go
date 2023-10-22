@@ -34,7 +34,6 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 	// Color Definitions
 	cr := C.New(C.FgRed).SprintFunc()
-	chg := C.New(C.FgHiGreen).SprintFunc()
 	cm := C.New(C.FgMagenta).SprintFunc()
 
 	var cmd tea.Cmd
@@ -68,8 +67,10 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				fmt.Println("Output: ", string(output))
 				return m, tea.Quit
 			}
+			chg := C.New(C.FgHiGreen).SprintFunc()
 			fmt.Println(chg(string(output)))
-			fmt.Println(cr("[HINT] Use pdtm -r <name> to remove"))
+			fmt.Printf(chg("[TEST] > Run %v --version"), selectedItem)
+			fmt.Println(cr("\n[HINT] Use pdtm -r <name> to remove"))
 			return m, tea.Quit
 
 		}
