@@ -35,4 +35,5 @@ N | W ? | Comment
 [`po3`](./po3/) | 3rd Protype | Adde Full banner with adjustments , full output of pdtm command , and table below
 [`po4`](./po4/) | 4th Prototype |Header Working , Table Fixed , Selection Working , Next Iteration is the prettification process 
 [`po5`](./po5/) | Prettification Section | Added nice header , spinner , table , and end messages , next iteration is for polishing up the code and renaming files 
-[`po6`](./po6/)| Code Polishing | ass  
+[`po6`](./po6/)| Code Polishing | Added some changes to show description , polished code annotations ,added end header
+[`po7`](./po7/) | Remove Files  | Remove all unnecessary files and shit  

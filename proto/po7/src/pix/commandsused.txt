@@ -1,0 +1,2 @@
+Reduce size of the image by half 
+ffmpeg -i input.jpg -vf "scale=iw/2:ih/2" output.jpg
