@@ -51,12 +51,13 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 		case "enter":
 			selectedItem := m.table.SelectedRow()[1] // This controls which item from the table is being selected starts with 0
+			selectedItemDescription := m.table.SelectedRow()[2]
 			cmd := exec.Command("pdtm", "-install", selectedItem)
 
 			output, err := cmd.CombinedOutput()
 
 			// Adding a spinner when installation going on
-			fmt.Println(cm("\n\n [INSTALL] ", selectedItem))
+			fmt.Println(cm("\n\n [INSTALL] ", selectedItem, " - " ,selectedItemDescription))
 			SpinMain()
 
 			// err := cmd.Run()
