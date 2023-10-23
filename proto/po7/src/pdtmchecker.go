@@ -23,6 +23,7 @@ var (
 	programName = "pdtm"
 	programArgs = " "
 	s           = `
+[HINT] pdtm required for this tool to work
 [HINT] go install -v github.com/projectdiscovery/pdtm/cmd/pdtm@latest
 `
 )
