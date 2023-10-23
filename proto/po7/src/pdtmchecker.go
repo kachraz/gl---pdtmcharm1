@@ -34,6 +34,7 @@ func PdtsChecker() {
 
 	cr := C.New(C.FgRed).SprintFunc()
 	chg := C.New(C.FgHiGreen).SprintFunc()
+	cb := C.New(C.FgBlue).SprintFunc()
 
 	cmd := exec.Command(programName, programArgs)
 	cmd.Stdout = os.Stdout
@@ -44,7 +45,7 @@ func PdtsChecker() {
 
 	if err != nil {
 		logger.Printf(cr("\n[FAIL] %s"), err)
-		fmt.Println(cr("[FAIL] PDTM - Project Discovery Open Source Tool Manager - not installed!\n" + chg(s)))
+		fmt.Println(cr("[FAIL] PDTM - Project Discovery Open Source Tool Manager - not installed!\n" + cb(s)))
 
 	} else {
 
