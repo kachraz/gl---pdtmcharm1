@@ -25,6 +25,7 @@ var (
 	s           = `
 [HINT] pdtm required for this tool to work
 [HINT] go install -v github.com/projectdiscovery/pdtm/cmd/pdtm@latest
+[HINT] If pdtm is already installed - source ~/.bashrc , exit shell and try agaain
 `
 )
 
