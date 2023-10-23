@@ -41,10 +41,9 @@ func PdtsChecker() {
 	err := cmd.Run()
 
 	if err != nil {
-		fmt.Println(cr("-------------------------------------"))
-		logger.Printf(cr("[FAIL] %s"), err)
+		logger.Printf(cr("\n[FAIL] %s"), err)
 		fmt.Println(cr("[FAIL] PDTM - Project Discovery Open Source Tool Manager - not installed!\n" + chg(s)))
-		fmt.Println(cr("-------------------------------------"))
+
 	} else {
 
 		fmt.Println(chg("\n[OK] Ran PDTS Successfully!...Choose Install below..."))
