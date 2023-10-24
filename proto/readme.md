@@ -37,3 +37,4 @@ N | W ? | Comment
 [`po5`](./po5/) | Prettification Section | Added nice header , spinner , table , and end messages , next iteration is for polishing up the code and renaming files 
 [`po6`](./po6/)| Code Polishing | Added some changes to show description , polished code annotations ,added end header
 [`po7`](./po7/) | Remove Files  | Remove all unnecessary files and shit  
+[`po8`](./po8/) | Add Help | Adding help flag functionality 
