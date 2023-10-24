@@ -13,23 +13,23 @@ func FuncHelp() {
 	var helpText = `
 ...................,'...................
 ...............'...;:lll'...............
-..............'..'.,,:;lxx'.............
-.............; .'..,,:;,cdO'............    
+..............'..'.,,:;lxx'.............  Built by *mixum systems* - R&D
+.............; .'..,,:;,cdO'............  Founded By - https://github.com/m0ham3dx  
 ............:, ... '';,,:lkc............    
-...........,'..       .';ldd............	Function calls PDTM andit has to be installed in order for it to work
-...........:.'   ....':,.';:;...........	made by - https://github.com/m0ham3dx
+...........,'..       .';ldd............	
+...........:.'   ....':,.';:;...........  
 ............;,  . .':..;.';,:...........
-...........,'.......:,;:',c.,..........'	Helper function for PDTM that displays a menu with desriptions of tools
-...........'.,.'.  .,'....:..:......''''
-............... ,.  ........;;;c'''.....	Function calls PDTM andit has to be installed in order for it to work
-............    ..  ..... .;':.l:',,''''
-.........';      .. .. ..''','';clc;,,'.
+...........,'.......:,;:',c.,..........'  Helper function for PDTM that displays a menu with desriptions of tools
+...........'.,.'.  .,'....:..:......''''  which you select for installation 
+............... ,.  ........;;;c'''.....  
+............    ..  ..... .;':.l:',,''''  PDTM Repo Official- 
+.........';      .. .. ..''','';clc;,,'.  https://github.com/projectdiscovery/pdtm
 .......,'..,.       .......'';ccllddlc;'
 .....,,.   '...   .......;l::c::;;;,;:lo
 .,;:,. .    ..............;llc;,,,,;;;cl
-.,.....:..       ....';;,;,'.,,'',:::;'.
+.,.....:..       ....';;,;,'.,,'',:::;'.  No guarantee this program will work as expected !
 ;.,....'.'.  ....'..,,;:;,',,...,,;''.;l
-.... .. ... . ........'.',,'. ..'....';c
+.... .. ... . ........'.',,'. ..'....';c  FREE PALESTINE ! 
   .    ..... ...........'.'.. .....  ...
 	`
 	fmt.Println(helpText)
